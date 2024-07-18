@@ -22,10 +22,11 @@
 //   NEO_GRBW    Pixels are wired for GRBW bitstream (RGB+W NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 
-Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(8, 8, D3,
-  NEO_MATRIX_BOTTOM     + NEO_MATRIX_LEFT +
-  NEO_MATRIX_COLUMNS + NEO_MATRIX_ZIGZAG,
-  NEO_GRB            + NEO_KHZ800);
+// Diese Einstellung ist für alle die ein LED Panel von AzDely haben.
+Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(8, 8, 0,
+  NEO_MATRIX_TOP + NEO_MATRIX_RIGHT + 
+  NEO_MATRIX_ROWS + NEO_MATRIX_PROGRESSIVE,
+  NEO_GRB + NEO_KHZ800);
 
 
 //const uint16_t colors[] = {
